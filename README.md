@@ -21,6 +21,7 @@ Or install it yourself as:
 Create a form in your view file using the "form_tag". 
 Prepend the name of the model along with a hyphen to the form attribute name. 
 Then to make it dynamic, append the dynamic id with a hyphen to the same form attribute. For eg., 
+    
     <% objects.each do |object| %>
         <%= text_field_tag "author" %> 
     <% end %>
