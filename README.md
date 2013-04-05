@@ -18,7 +18,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a form in your view file using the "form_tag". 
+Prepend the name of the model along with a hyphen to the form attribute name. 
+Then to make it dynamic, append the dynamic id with a hyphen to the same form attribute. For eg., 
+    <% objects.each do |object| %>
+        <%= text_field_tag "author" %> 
+    <% end %>
+    <%= submit_tag "Save", :class => "save_btn"%>
+    
+should be written as   
+    
+    <% objects.each do |object| %>
+        <%= text_field_tag "book-author-"+object.id.to_s %>
+    <% end %>
+    <%= submit_tag "Save", :class => "save_btn"%>
+    
+The controller will implement the gem like:
+
+Multiinsert::SaveRecords.save(params hash, book, save) # for saving the records
+
+Multiinsert::SaveRecords.save(params hash, book, save) # for updating the records
+
+That is it.
 
 ## Contributing
 
