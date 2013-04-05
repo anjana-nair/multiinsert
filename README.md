@@ -1,6 +1,6 @@
 # Multiinsert
 
-TODO: Write a gem description
+This gem should enable you to save/update multiple records of the same model in one form submit.
 
 ## Installation
 
