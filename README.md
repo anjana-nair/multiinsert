@@ -38,7 +38,7 @@ The controller will implement the gem like:
 
 Multiinsert::SaveRecords.save(params hash, book, save) # for saving the records
 
-Multiinsert::SaveRecords.save(params hash, book, save) # for updating the records
+Multiinsert::SaveRecords.save(params hash, book, update) # for updating the records
 
 That is it.
 
